@@ -51,8 +51,7 @@
 import CampaignTableElement from "@/components/CampaignTableElement.vue";
 import UserBox from "@/components/UserBox.vue";
 import ClientBox from "@/components/ClientBox.vue";
-import { Components } from "../types/enum";
-import { Campaign } from "../api-client";
+import { Components, Campaign } from "../types/types";
 
 export default {
   name: "DataBoard",

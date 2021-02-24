@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { Components } from "../types/enum";
+import { Components } from "../types/types";
 
 export default {
   name: "AsideMenu",

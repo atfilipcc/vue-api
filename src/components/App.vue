@@ -24,8 +24,9 @@
 <script lang="ts">
 import DataBoard from "@/components/DataBoard.vue";
 import AsideMenu from "@/components/AsideMenu.vue";
-import { ApiClient, Campaign, Client, User } from "@/api-client";
-import { Components } from "../types/enum";
+import { ApiClient } from "@/api-client";
+import { Campaign, Client, User } from "@/types/types";
+import { Components } from "../types/types";
 import BounceLoader from 'vue-spinner/src/BounceLoader.vue';
 
 export default {

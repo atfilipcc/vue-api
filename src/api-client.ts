@@ -1,31 +1,4 @@
-enum CampaignType {
-	SOCIAL_MEDIA,
-	SEARCH_ENGINE,
-}
-
-interface Client {
-	id: number;
-	name: string;
-}
-
-interface User {
-	id: number;
-	name: string;
-	email: string;
-	password: string;
-	image: string;
-}
-
-interface Campaign {
-	id: number | null;
-	name: string;
-	type: CampaignType;
-	client: Client;
-	campaignManager: User;
-	startDate: string;
-	endDate: string;
-	budget: number;
-}
+import { Campaign, User, Client, CampaignType } from './types/types';
 
 class ApiClient {
 	private campaigns: Campaign[]
