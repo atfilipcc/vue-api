@@ -53,16 +53,27 @@ a {
 .menu-list a:hover {
     background-color: #2F3042;
     border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
 }
 
 .active {
   background-color:#0177FB;
   border-radius: 10px;
+  width: 100%;
+  max-width: 100px;
 }
 
 .menu-list a.active {
     background-color:#0177FB;
-    min-width: 100%;
+    width: 100%;
+    max-width: 250px;
 }
+
+  @media only screen and (max-width: 900px) {
+    .menu-list a.active, .menu-list a:hover {
+    max-width: 300px;
+    }
+  }
 
 </style>

@@ -21,7 +21,7 @@
 
 <script lang="ts">
 export default {
-  name: "ClientCard",
+  name: "ClientBox",
   props: { 
     client: Object,
   },

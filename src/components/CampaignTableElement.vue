@@ -11,7 +11,7 @@
 
 <script lang="ts">
 export default {
-  name: "CampaignCard",
+  name: "CampaignTableElement",
   props: {
     campaign: Object,
   },

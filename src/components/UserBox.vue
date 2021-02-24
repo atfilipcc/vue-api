@@ -11,7 +11,7 @@
           <p>
             <strong>{{ user.name }}</strong>
             <br />
-            <span>{{ user.email }}</span>
+            <span class="email">{{ user.email }}</span>
           </p>
         </div>
       </div>
@@ -21,7 +21,7 @@
 
 <script lang="ts">
 export default {
-  name: "UserCard",
+  name: "UserBox",
   methods: {
     getImageUrl() {
       return require(`@/assets/static/images/faces/${this.user.image}`);
@@ -51,5 +51,10 @@ export default {
 .content * {
   color: white;
   font-family: Poppins;
+}
+
+.email {
+  display: inline-block;
+  word-break: break-word;
 }
 </style>

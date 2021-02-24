@@ -5,7 +5,7 @@
     <main class="main">
       <AsideMenu @view="receiveViewEmitter" />
       <section class="container">
-        <Board
+        <DataBoard
           v-if="loaded"
           :currentComponent="currentComponent"
           :loaded="loaded"
@@ -22,8 +22,7 @@
 </template>
 
 <script lang="ts">
-import Board from "@/components/Board.vue";
-import Navbar from "@/components/Navbar.vue";
+import DataBoard from "@/components/DataBoard.vue";
 import AsideMenu from "@/components/AsideMenu.vue";
 import { ApiClient, Campaign, Client, User } from "@/api-client";
 import { Components } from "../types/enum";
@@ -31,7 +30,7 @@ import BounceLoader from 'vue-spinner/src/BounceLoader.vue';
 
 export default {
   name: "App",
-  components: { Board, Navbar, AsideMenu, BounceLoader },
+  components: { DataBoard, AsideMenu, BounceLoader },
   data() {
     return {
       apiClient: {} as ApiClient,
@@ -88,8 +87,7 @@ html {
 body {
   background: #222433;
 }
-.root {
-}
+
 .main {
   display: flex;
   flex-direction: row;
@@ -101,6 +99,7 @@ body {
   background: #1e1d2b;
   border-radius: 20px;
   min-height: 100%;
+  margin: 10px;
 }
 .spinner {
   height: 95vh;
@@ -112,5 +111,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+  @media only screen and (max-width: 900px) {
+    .main {
+      flex-direction: column;
+    }
+  }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 </style>
